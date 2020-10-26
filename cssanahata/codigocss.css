@@ -1,0 +1,69 @@
+Código CSS
+
+.tabs {
+position: relative;
+min-height: 50px;
+clear: both;
+margin:100px;
+}
+.tab {
+float: left;
+}/* #C0C0C0 color original */
+.tab label {
+background: url("../imagenes/6475-verde.jpg");
+background-repeat: no-repeat;
+padding: 15px;
+border: 3px solid #008080;
+margin-left: -4px;
+position: relative;
+left: 70px;
+bottom: 130px;
+top: ;
+}
+.tab [type=radio] {
+display: none;
+}
+.content {
+position: absolute;
+top: 720px;
+left: 0;
+background: url("../imagenes/6475-verde.jpg");
+background-repeat: no-repeat;
+background-position: top:-10px;
+right: 1px;
+bottom: px;
+padding: 20px;
+
+overflow:visible;
+}
+.content > * {
+opacity: 0;
+
+-webkit-transform: translate3d(0, 0, 0);
+
+-webkit-transform: translateX(-100%);
+-moz-transform: translateX(-100%);
+-ms-transform: translateX(-100%);
+-o-transform: translateX(-100%);
+
+-webkit-transition: all 0.6s ease;
+-moz-transition: all 0.6s ease;
+-ms-transition: all 0.6s ease;
+-o-transition: all 0.6s ease;
+}
+[type=radio]:checked ~ label {
+background-color:#9EA4A1;
+border-bottom: 5px solid #008080;
+z-index: 2;
+}
+[type=radio]:checked ~ label ~ .content {
+z-index: 1;
+}
+[type=radio]:checked ~ label ~ .content > * {
+opacity: 1;
+
+-webkit-transform: translateX(0);
+-moz-transform: translateX(0);
+-ms-transform: translateX(0);
+-o-transform: translateX(0);
+}
